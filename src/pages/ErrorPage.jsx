@@ -1,12 +1,12 @@
-import { Outlet } from "react-router-dom";
 import MainNavigation from "../components/MainNavigation";
 
-export const Layout = () => {
+export const ErrorPage = () => {
   return (
     <>
       <MainNavigation />
       <main>
-        <Outlet />
+        <h1>An error occured!</h1>
+        <h5>Could not find this page.</h5>
       </main>
     </>
   );
