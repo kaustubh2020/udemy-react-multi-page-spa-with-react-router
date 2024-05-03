@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import styles from "./MainNavigation.module.css"
+import styles from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
   return (
@@ -8,10 +8,21 @@ const MainNavigation = () => {
       <nav>
         <ul className={styles.list}>
           <li>
-            <Link to={"/"}>Home</Link>
+            <NavLink
+              to={"/"}
+              end
+              className={(isActive) => (isActive ? styles.active : undefined)}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to={"/about"}>About</Link>
+            <NavLink
+              to={"/about"}
+              className={(isActive) => (isActive ? styles.active : undefined)}
+            >
+              About
+            </NavLink>
           </li>
         </ul>
       </nav>
